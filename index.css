@@ -1,0 +1,173 @@
+body {
+	margin: 0px;
+}
+
+body * {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	outline: none;
+}
+
+#root {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	border: 1px solid gray;
+	border-radius: 20px;
+}
+
+.content {
+	text-align: center;
+	padding: 32px;
+	width: 400px;
+}
+
+.heading {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.third-party-list {
+	margin: 24px 0px;
+}
+
+.third-party-item {
+	text-decoration: none;
+	padding: 8px;
+	display: inline-block;
+	margin: 0px 12px;
+	border: 1px solid gray;
+	border-radius: 8px;
+}
+
+.third-party-item img {
+	width: 24px;
+	display: block;
+}
+
+.subtitle {
+	margin-bottom: 24px;
+}
+
+.form-item {
+	position: relative;
+	margin-bottom: 24px;
+	text-align: left;
+}
+
+.form-item .form-input {
+	position: relative;
+	width: 100%;
+	font-size: 16px;
+	border: 1px solid black;
+	border-radius: 50vh;
+	padding: 12px 20px;
+	background-color: transparent;
+	z-index: 1;
+}
+
+.form-item .form-input::placeholder {
+	color: transparent;
+}
+
+.form-item .form-input~.form-label {
+	position: absolute;
+	top: 0px;
+	left: 16px;
+	padding: 0px 4px;
+	transform: translateY(-50%);
+	transition: 0.1s ease;
+	z-index: 2;
+	background-color: white;
+}
+
+.form-input:placeholder-shown~.form-label {
+	top: 50%;
+	z-index: 0;
+}
+
+.form-item .form-input:focus~.form-label {
+	top: 0px;
+	z-index: 2;
+}
+
+.form-item .form-checkbox {
+	appearance: none;
+	margin: 0px 4px 0px 0px;
+	vertical-align: bottom;
+	position: relative;
+}
+
+.form-item .form-checkbox::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	display: block;
+	border: 1px solid black;
+	border-radius: 4px;
+	position: relative;
+}
+
+.form-item .form-checkbox::after {
+	content: "";
+	width: 7px;
+	height: 12px;
+	display: block;
+	border: solid black;
+	border-width: 0px 1px 1px 0px;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 1px;
+	left: 5px;
+	display: none;
+}
+
+.form-item .form-checkbox:checked::after {
+	display: block;
+}
+
+.form-item .forgot-password {
+	float: right;
+	text-decoration: none;
+	color: blue;
+}
+
+.form-submit {
+	font-size: 16px;
+	padding: 8px 20px;
+	cursor: pointer;
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+#cover {
+	position: absolute;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	background-color: aqua;
+	z-index: 1;
+	border-radius: 100px 20px 20px 100px;
+	text-align: center;
+	transition: 0.5s linear;
+}
+
+#cover-toggle {
+	display: none;
+}
+
+#cover-toggle~label {
+	font-size: 16px;
+	padding: 8px 20px;
+	cursor: pointer;
+	border: 1px solid black;
+	border-radius: 8px;
+	display: inline-block;
+}
+
+#cover:has(#cover-toggle:checked) {
+	left: 0px;
+	border-radius: 20px 100px 100px 20px;
+}

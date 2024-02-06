@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<link rel="stylesheet" type="text/css" href="./index.css" />
+	<title>Login Page</title>
+</head>
+
+<body>
+	<div id="root">
+		<div id="login" class="content">
+			<div class="heading">Sign In</div>
+			<div class="third-party-list">
+				<a href="#" class="third-party-item">
+					<img src="./images/google.png" alt="google icon" />
+				</a>
+				<a href="#" class="third-party-item">
+					<img src="./images/facebook.png" alt="facebook icon" />
+				</a>
+				<a href="#" class="third-party-item">
+					<img src="./images/github.png" alt="github icon" />
+				</a>
+				<a href="#" class="third-party-item">
+					<img src="./images/linkedin.png" alt="linkedin icon" />
+				</a>
+			</div>
+			<div class="subtitle">Or Use Email And Password</div>
+			<form action="" method="post" class="form">
+				<div class="form-item">
+					<input type="text" name="email" id="login-email" class="form-input" placeholder="Enter Email" />
+					<label for="login-email" class="form-label">Enter Email</label>
+				</div>
+				<div class="form-item">
+					<input type="password" name="password" id="login-password" class="form-input" placeholder="Enter Password" />
+					<label for="login-password" class="form-label">Enter Password</label>
+				</div>
+				<div class="form-item">
+					<input type="checkbox" name="remember" id="login-remember" class="form-checkbox" />
+					<label for="login-remember" class="form-label">Remember Me</label>
+					<a href="#" class="forgot-password">Forgot Password ?</a>
+				</div>
+				<input type="submit" value="Sign In" class="form-submit" />
+			</form>
+		</div>
+		<div id="register" class="content">
+			<div class="heading">Sign up</div>
+			<div class="third-party-list">
+				<a href="#" class="third-party-item">
+					<img src="./images/google.png" alt="google icon" />
+				</a>
+				<a href="#" class="third-party-item">
+					<img src="./images/facebook.png" alt="facebook icon" />
+				</a>
+				<a href="#" class="third-party-item">
+					<img src="./images/github.png" alt="github icon" />
+				</a>
+				<a href="#" class="third-party-item">
+					<img src="./images/linkedin.png" alt="linkedin icon" />
+				</a>
+			</div>
+			<div class="subtitle">Or Use Email For Registration</div>
+			<form action="" method="post" class="form">
+				<div class="form-item">
+					<input type="text" name="email" id="register-email" class="form-input" placeholder="Enter Email" />
+					<label for="register-email" class="form-label">Enter Email</label>
+				</div>
+				<div class="form-item">
+					<input type="password" name="password" id="register-password" class="form-input" placeholder="Enter Password" />
+					<label for="register-password" class="form-label">Enter Password</label>
+				</div>
+				<div class="form-item">
+					<input type="password" name="password" id="register-password-confirmation" class="form-input" placeholder="Enter Password Confirmation" />
+					<label for="register-password-confirmation" class="form-label">Enter Password Confirmation</label>
+				</div>
+				<input type="submit" value="Sign Up" class="form-submit" />
+			</form>
+		</div>
+		<div id="cover">
+			<input type="checkbox" name="toggle" id="cover-toggle" />
+			<label for="cover-toggle">Toggle</label>
+		</div>
+	</div>
+</body>
+
+</html>
